@@ -44,12 +44,12 @@ Just high-quality raw market data.
 
 ```mermaid
 flowchart LR
-    A[CLI / Wizard] --> B[Input Validation]
-    B --> C[Yahoo Finance API (yfinance)]
+    A[CLI or Wizard] --> B[Input Validation]
+    B --> C[Yahoo Finance API - yfinance]
     C --> D[TOHLCV Normalization]
     D --> E[Data Validation Layer]
     E --> F[Structured Storage Engine]
-    F --> G[quant_trading_system/data]
+    F --> G[quant_trading_system data folder]
 ```
 
 ---
@@ -67,7 +67,7 @@ flowchart TD
     subgraph Core Engine
         B1[Date Range Fix]
         B2[Fetch via yfinance]
-        B3[Timezone Normalize UTC]
+        B3[Timezone Normalize to UTC]
         B4[Schema Enforcement]
         B5[Integrity Checks]
     end
@@ -79,7 +79,7 @@ flowchart TD
     end
 
     subgraph Output
-        D1[data/<TICKER>/tohlcv/<interval>/start_end.parquet]
+        D1[data TICKER tohlcv interval start_end parquet]
     end
 
     A1 --> B1
@@ -92,6 +92,7 @@ flowchart TD
     C1 --> C2
     C2 --> C3
     C3 --> D1
+
 ```
 
 ---
