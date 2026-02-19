@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual environment
+.venv/
+env/
+
+# Parquet / data
+*.parquet
+data/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
